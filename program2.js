@@ -7,12 +7,12 @@ const decodeTheRing = function (s, p) {
     if (p[pIndex] === '*') {
 
       if (pIndex === p.length - 1) return true;
-      let nextChar = p[pIndex + 1];
-      let nextCharIndex = s.indexOf(nextChar, sIndex);
+      let nextCh = p[pIndex + 1];
+      let nextChIndex = s.indexOf(nextCh, sIndex);
 
-      if (nextCharIndex === -1) return false;
+      if (nextChIndex === -1) return false;
 
-      sIndex = nextCharIndex;
+      sIndex = nextChIndex;
       pIndex++;
     } else if (p[pIndex] === '?' || p[pIndex] === s[sIndex]) {
       sIndex++;
